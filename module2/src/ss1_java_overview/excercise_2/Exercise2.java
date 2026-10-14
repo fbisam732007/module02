@@ -2,7 +2,7 @@ package ss1_java_overview.excercise_2;
 
 import java.util.Scanner;
 
-public class exercise_2 {
+public class Exercise2 {
     static final double RATE = 25907;
     public static void main(String[] args) {
 
