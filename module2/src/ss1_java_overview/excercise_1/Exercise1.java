@@ -1,7 +1,7 @@
 package ss1_java_overview.excercise_1;
 import java.util.Scanner;
 
-public class exercise_1 {
+public class Exercise1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
