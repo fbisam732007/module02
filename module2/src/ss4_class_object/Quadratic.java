@@ -38,7 +38,6 @@ class QuadraticEquation {
     }
 }
 
-// Đã đổi tên class Main thành Quadratic để khớp với tên file của bạn
 public class Quadratic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
