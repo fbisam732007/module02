@@ -48,5 +48,5 @@ public class Fan {
                 ? "fan is on: speed = " + speedName()
                 + ", color = " + color + ", radius = " + radius
                 : "fan is off: color = " + color + ", radius = " + radius;
-    }
+     }
 }

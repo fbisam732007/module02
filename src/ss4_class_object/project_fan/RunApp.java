@@ -7,5 +7,5 @@ public class RunApp {
 
         System.out.println("Fan 1: " + fan1);
         System.out.println("Fan 2: " + fan2);
-    }
+     }
 }
