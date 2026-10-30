@@ -41,7 +41,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "id: " + id + "tên: " + name + "giá: " + price;
+        return " id: " + id + " tên: " + name + " giá: " + price;
     }
 }
-

@@ -3,7 +3,10 @@ package ss5_acceess_modifier.full_menu;
 import java.util.ArrayList;
 
 public class ProductManager {
-    private ArrayList<Product> products = new ArrayList<>();
+    private static ArrayList<Product> products = new ArrayList<>();
+    static {
+        products.set(0, new Product( 1, "iphone", 10000));
+    }
 
     public void showList() {
         for (Product p : products) {
