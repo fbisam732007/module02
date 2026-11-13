@@ -8,7 +8,7 @@ public abstract class Oto extends PhuongTien {
     public Oto() {
     }
 
-    public Oto(String bienKiemSoat, Hangsanxuat hangsanxuat, int namSanXuat, String chuSoHuu) {
+    public Oto(String bienKiemSoat, HangSanXuat hangsanxuat, int namSanXuat, String chuSoHuu) {
         super(bienKiemSoat, hangsanxuat, namSanXuat, chuSoHuu);
         this.soChoNgoi = soChoNgoi;
         this.kieuXe = kieuXe;

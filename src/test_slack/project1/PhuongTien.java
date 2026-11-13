@@ -2,14 +2,14 @@ package test_slack.project1;
 
 public abstract class PhuongTien {
     private String bienKiemSoat;
-    private Hangsanxuat hangsanxuat;
+    private HangSanXuat hangsanxuat;
     private int namSanXuat;
     private String chuSoHuu;
 
     public PhuongTien() {
     }
 
-    public PhuongTien(String bienKiemSoat, Hangsanxuat hangsanxuat, int namSanXuat, String chuSoHuu) {
+    public PhuongTien(String bienKiemSoat, HangSanXuat hangsanxuat, int namSanXuat, String chuSoHuu) {
         this.bienKiemSoat = bienKiemSoat;
         this.hangsanxuat = hangsanxuat;
         this.namSanXuat = namSanXuat;
@@ -24,11 +24,11 @@ public abstract class PhuongTien {
         this.bienKiemSoat = bienKiemSoat;
     }
 
-    public Hangsanxuat getHangsanxuat() {
+    public HangSanXuat getHangsanxuat() {
         return hangsanxuat;
     }
 
-    public void setHangsanxuat(Hangsanxuat hangsanxuat) {
+    public void setHangsanxuat(HangSanXuat hangsanxuat) {
         this.hangsanxuat = hangsanxuat;
     }
 

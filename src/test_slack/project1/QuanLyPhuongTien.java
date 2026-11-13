@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
     public class QuanLyPhuongTien {
     private final Scanner scanner;
-    private final List<Hangsanxuat> hangsanxuat = new ArrayList<>();
+    private final List<HangSanXuat> hangsanxuat = new ArrayList<>();
     private final List<PhuongTien> ds = new ArrayList<>();
 
     public QuanLyPhuongTien(Scanner scanner) {
@@ -15,15 +15,15 @@ import java.util.ArrayList;
     }
 
     private void khoiTaoDuLieu() {
-        hangsanxuat.add(new Hangsanxuat("HSX-001", "Toyota", "Nhật Bản"));
-        hangsanxuat.add(new Hangsanxuat("HSX-002", "Hyundai", "Hàn Quốc"));
-        hangsanxuat.add(new Hangsanxuat("HSX-003", "Honda", "Nhật Bản"));
+        hangsanxuat.add(new HangSanXuat("HSX-001", "Toyota", "Nhật Bản"));
+        hangsanxuat.add(new HangSanXuat("HSX-002", "Hyundai", "Hàn Quốc"));
+        hangsanxuat.add(new HangSanXuat("HSX-003", "Honda", "Nhật Bản"));
 
         ds.add(new XeTai("43C-12345", timHang("Hyundai"), 2019, "Võ A Sâm", 3.5));
     }
 
-    private Hangsanxuat timHang(String ten) {
-        for (Hangsanxuat hang : hangsanxuat) {
+    private HangSanXuat timHang(String ten) {
+        for (HangSanXuat hang : hangsanxuat) {
             if (hang.getTenHang().equalsIgnoreCase(ten)) return hang;
         }
         return null;
@@ -52,10 +52,10 @@ import java.util.ArrayList;
 
         System.out.print("Tên hãng: ");
         String tenHang = scanner.nextLine().trim();
-        Hangsanxuat hang = timHang(tenHang);
+        HangSanXuat hang = timHang(tenHang);
         if (hang == null) {
             System.out.println("Không tìm thấy hãng. Các hãng hiện có:");
-            for (Hangsanxuat h : hangsanxuat) System.out.println("  " + h);
+            for (HangSanXuat h : hangsanxuat) System.out.println("  " + h);
             return;
         }
 
@@ -86,7 +86,7 @@ import java.util.ArrayList;
         System.out.print("Tên hãng mới (Enter để giữ nguyên): ");
         String tenHang = scanner.nextLine().trim();
         if (!tenHang.isEmpty()) {
-            Hangsanxuat hang = timHang(tenHang);
+            HangSanXuat hang = timHang(tenHang);
             if (hang == null) {
                 System.out.println("Hãng không tồn tại, giữ nguyên hãng cũ.");
             } else {

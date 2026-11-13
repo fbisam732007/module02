@@ -1,14 +1,14 @@
 package test_slack.project1;
 
-public class Hangsanxuat {
+public class HangSanXuat {
     private String maHang;
     private String tenHang;
     private String quocGia;
 
-    public Hangsanxuat() {
+    public HangSanXuat() {
     }
 
-    public Hangsanxuat(String maHang, String tenHang, String quocGia) {
+    public HangSanXuat(String maHang, String tenHang, String quocGia) {
         this.maHang = maHang;
         this.tenHang = tenHang;
         this.quocGia = quocGia;
@@ -41,5 +41,5 @@ public class Hangsanxuat {
     @Override
       public String toString() {
             return maHang + " - " + tenHang + " ( " + quocGia + ")";
-                    }
+        }
     }

@@ -6,7 +6,7 @@ public class XeMay extends PhuongTien {
     public XeMay() {
     }
 
-        public XeMay(String bienKiemSoat, Hangsanxuat hangsanxuat, int namSanXuat, String chuSoHuu, int congSuat) {
+        public XeMay(String bienKiemSoat, HangSanXuat hangsanxuat, int namSanXuat, String chuSoHuu, int congSuat) {
         super(bienKiemSoat, hangsanxuat, namSanXuat, chuSoHuu);
         this.congSuat = congSuat;
     }
