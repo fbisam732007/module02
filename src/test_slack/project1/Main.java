@@ -1,56 +1,20 @@
 package test_slack.project1;
 
-import java.util.Scanner;
+import test_slack.project1.controller.PhuongTienController;
+import test_slack.project1.repository.HangSanXuatRepository;
+import test_slack.project1.repository.PhuongTienRepository;
+import test_slack.project1.service.PhuongTienService;
+import test_slack.project1.view.PhuongTienView;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        HangSanXuatRepository hangRepo = new HangSanXuatRepository();
+        PhuongTienRepository phuongTienRepo = new PhuongTienRepository();
 
-        QuanLyPhuongTien ql = new QuanLyPhuongTien(sc);
+        PhuongTienService service = new PhuongTienService(phuongTienRepo, hangRepo);
+        PhuongTienView view = new PhuongTienView();
+        PhuongTienController controller = new PhuongTienController(service, view);
 
-        boolean isActive = true;
-        while (isActive) {
-            System.out.println("------APP QL phương tiện giao thông---------");
-            System.out.println("1. Danh sách");
-            System.out.println("2. Thêm xe");
-            System.out.println("3. Sửa");
-            System.out.println("4. Xóa ");
-            System.out.println("5. Thoát app");
-            System.out.print("---chức năng---- \nChọn: ");
-
-            int choose;
-            try {
-                choose = Integer.parseInt(sc.nextLine().trim());
-            } catch (NumberFormatException e) {
-                System.out.println("Vui lòng nhập số từ 1-5.");
-                continue;
-            }
-
-            switch (choose) {
-                case 1:
-                    System.out.println("-----Hiện danh sách xe-----");
-                    ql.hienThiDanhSach();
-                    break;
-                case 2:
-                    System.out.println("----thêm xe---");
-                    ql.themXe();
-                    break;
-                case 3:
-                    System.out.println("----chức năng sửa-----");
-                    ql.suaXe();
-                    break;
-                case 4:
-                    System.out.println("-----chức năng xóa----- ");
-                    ql.xoaXe();
-                    break;
-                case 5:
-                    isActive = false;
-                    break;
-                default:
-                    System.out.println("Lựa chọn không hợp lệ.");
-            }
-        }
-        System.out.println("---kết thúc chương trình------");
-        sc.close();
-         }
+        controller.chay();
+    }
 }

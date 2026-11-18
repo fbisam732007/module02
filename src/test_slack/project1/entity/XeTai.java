@@ -1,4 +1,4 @@
-package test_slack.project1;
+package test_slack.project1.entity;
 
 public class XeTai extends PhuongTien {
     private double trongTai;

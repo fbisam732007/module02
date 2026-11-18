@@ -1,4 +1,4 @@
-package test_slack.project1;
+package test_slack.project1.entity;
 
 public abstract class Oto extends PhuongTien {
     private int soChoNgoi;
@@ -8,7 +8,8 @@ public abstract class Oto extends PhuongTien {
     public Oto() {
     }
 
-    public Oto(String bienKiemSoat, HangSanXuat hangsanxuat, int namSanXuat, String chuSoHuu) {
+    public Oto(String bienKiemSoat, HangSanXuat hangsanxuat, int namSanXuat, String chuSoHuu,
+               int soChoNgoi, String kieuXe) {
         super(bienKiemSoat, hangsanxuat, namSanXuat, chuSoHuu);
         this.soChoNgoi = soChoNgoi;
         this.kieuXe = kieuXe;
@@ -32,6 +33,6 @@ public abstract class Oto extends PhuongTien {
 
     @Override
     public String getThongTinRieng() {
-        return "số chỗ ngồi: " + soChoNgoi + "kiểu xe: " + kieuXe;
+        return "Số chỗ ngồi: " + soChoNgoi + ", kiểu xe: " + kieuXe;
           }
 }
